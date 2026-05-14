@@ -39,7 +39,7 @@ jobs:
 
       - name: Build Debian Package (debuild)
         run: |
-          cd build_env/mimage-${UPSTREAM_VERSIOzN}
+          cd build_env/mimage-${UPSTREAM_VERSION}
           debuild -us -uc
 
       - name: Quality Assurance (Lintian)
@@ -58,5 +58,6 @@ jobs:
         with:
           name: mimage-${{ env.DEB_VERSION }}-source
           path: |
-            build_env/*.deb
-            build_env/*.changes
+            *.deb
+            *.zip
+            *.tar.gz
