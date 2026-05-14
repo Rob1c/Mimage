@@ -31,16 +31,15 @@ jobs:
         run: |
           mkdir -p build_env/mimage-${UPSTREAM_VERSION}
 
-          # copies everythng (except .git folder obviously)
+          # copies everything (except .git folder)
           rsync -a --exclude='.git' --exclude='build_env' ./ build_env/mimage-${UPSTREAM_VERSION}/
 
           cd build_env
-          # original tar
           tar -cJvf mimage_${UPSTREAM_VERSION}.orig.tar.xz --exclude='debian' mimage-${UPSTREAM_VERSION}/
 
       - name: Build Debian Package (debuild)
         run: |
-          cd build_env/mimage-${UPSTREAM_VERSION}
+          cd build_env
           debuild -us -uc
 
       - name: Quality Assurance (Lintian)
