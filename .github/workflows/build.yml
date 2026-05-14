@@ -56,8 +56,11 @@ jobs:
       - name: Upload All Artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: mimage-${{ env.DEB_VERSION }}-source
+          # Questo darà un nome chiaro al download, es: mimage-1.0-1-build
+          name: mimage-${{ env.DEB_VERSION }}-build
           path: |
-            *.deb
-            *.zip
-            *.tar.gz
+            build_env/*.deb
+            build_env/*.changes
+            build_env/*.buildinfo
+            mimage_*_source.zip
+            mimage_*_source.tar.gz
