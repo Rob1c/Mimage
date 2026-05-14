@@ -39,14 +39,13 @@ jobs:
 
       - name: Build Debian Package (debuild)
         run: |
-          cd build_env
+          cd build_env/mimage-${UPSTREAM_VERSION}
           debuild -us -uc
 
       - name: Quality Assurance (Lintian)
         run: |
           cd build_env
-          #  lintian on generated .changes
-          lintian -EviIL +pedantic mimage_${DEB_VERSION}_amd64.changes || true
+          lintian -EviIL +pedantic *.changes || true
 
       - name: Create Source Code Archives
         run: |
