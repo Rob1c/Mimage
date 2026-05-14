@@ -16,8 +16,7 @@ jobs:
       - name: Install Debian Build Dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y devscripts debhelper dpkg-dev lintian fakeroot rsync equivs
-          sudo mk-build-deps -i -t "apt-get -o Debug::pkgProblemResolver=yes -y" debian/control
+          sudo apt-get install -y debhelper dpkg-dev lintian fakeroot rsync
 
       - name: Extract Versioning Info
         id: pkg_info
@@ -42,12 +41,13 @@ jobs:
       - name: Build Debian Package (debuild)
         run: |
           cd build_env/mimage-${UPSTREAM_VERSION}
-          debuild -us -uc -b --no-lintian
+          debuild -us -uc
 
-     - name: Quality Assurance (Lintian)
+      - name: Quality Assurance (Lintian)
         run: |
           cd build_env
-          lintian -EviIL +pedantic *.changes || true
+          #  lintian on generated .changes
+          lintian -EviIL +pedantic mimage_${DEB_VERSION}_amd64.changes || true
 
       - name: Create Source Code Archives
         run: |
