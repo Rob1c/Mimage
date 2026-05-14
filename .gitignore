@@ -3,7 +3,7 @@
 *.tar.gz
 *.7z
 
-build/
+*build/
 obj/
 
 .DS_Store

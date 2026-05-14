@@ -42,11 +42,11 @@ Refer to the LICENSE.txt and debian/copyright files for full details.
 ## Installation
 Via apt (**recommended**, because it automatically resolves dependencies):
 ```bash
-sudo apt install ./mimage-[version]-deb.deb
+sudo apt install ./mimage-[version]_all.deb
 ```
 Or via dpkg:
 ```bash
-sudo dpkg -i ./mimage-[version]-deb.deb
+sudo dpkg -i ./mimage-[version]_all.deb
 ```
 ## Compatibility
 This package was developed and tested under `Debian 13 "Trixie" (Stable)`, but it should work fine under every debian-based system.
