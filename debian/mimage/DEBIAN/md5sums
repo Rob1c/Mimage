@@ -1,0 +1,6 @@
+06bef23c3b2ee4d033e9756cab0ea485  usr/bin/mimage
+9e2e35e0a8bf8d24d1ed7a87537d8c60  usr/lib/mimage/Macintosh.exe
+5a0acb75399984ec72f8e246b79f00a3  usr/share/doc/mimage/changelog.Debian.gz
+5b3442d8e8dba674d9e05abeb4146f81  usr/share/doc/mimage/copyright
+823ce82079651c509a0ee406bd279d35  usr/share/lintian/overrides/mimage
+13851b6e76cd83475ab5339448d37852  usr/share/man/man1/mimage.1.gz

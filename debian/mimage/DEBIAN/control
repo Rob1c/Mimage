@@ -1,0 +1,12 @@
+Package: mimage
+Version: 1.0-1
+Architecture: all
+Maintainer: Roberto Chichiarelli <roberto.chichiarelli@gmail.com>
+Installed-Size: 66
+Depends: wine | wine64 | wine32
+Section: non-free/utils
+Priority: optional
+Description: Convert old Macintosh floppy images into .raw files
+ Simple shell command line tool for converting old Macintosh floppy images
+ into .raw files for low-level writing. It acts as a wrapper for
+ ZrX's "Macintosh.exe" utility.

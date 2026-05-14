@@ -1,0 +1,13 @@
+#!/usr/bin/make -f
+
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all
+
+%:
+	dh $@
+
+override_dh_lintian:
+	dh_lintian
+
+override_dh_fixperms:
+	dh_fixperms
+	chmod +x debian/mimage/usr/bin/mimage

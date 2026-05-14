@@ -1,0 +1,14 @@
+Source: mimage
+Section: non-free/utils
+Priority: optional
+Maintainer: Roberto Chichiarelli <roberto.chichiarelli@gmail.com>
+Build-Depends: debhelper-compat (= 13)
+Standards-Version: 4.7.2
+Rules-Requires-Root: no
+
+Package: mimage
+Architecture: all
+Depends: ${misc:Depends}, wine | wine64 | wine32
+Description: Simple shell command line tool for converting old Macintosh floppy images
+ into .raw files for low-level writing. It acts as a wrapper for
+ ZrX's "Macintosh.exe" utility.

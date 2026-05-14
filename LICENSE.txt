@@ -1,0 +1,14 @@
+
+CC-BY-NC License v4.0
+
+Mimage (c) v1.0
+
+Copyright (c) 2026 Roberto Chichiarelli "Robic"
+Created by Roberto Chichiarelli
+GitHub: https://github.com/Rob1c
+Development period: April 2026 -
+
+Any violation of these terms may result in termination of rights granted under this license.
+
+For commercial licensing inquiries, contact: roberto.chichiarelli@gmail.com
+

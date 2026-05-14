@@ -1,0 +1,3 @@
+Macintosh.exe usr/lib/mimage/
+mimage usr/bin/
+debian/mimage.1 usr/share/man/man1/

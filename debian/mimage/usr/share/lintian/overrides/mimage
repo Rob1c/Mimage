@@ -1,0 +1,2 @@
+mimage: arch-independent-package-contains-binary-or-object [usr/lib/mimage/Macintosh.exe]
+mimage: source-contains-prebuilt-windows-binary [Macintosh.exe]

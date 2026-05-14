@@ -1,0 +1,9 @@
+#!/bin/bash
+echo "mimage © 2026 Roberto Chichiarelli"
+echo "Original software © ZrX (forum.kryoflux.com; https://forum.kryoflux.com/viewtopic.php?t=1090)"
+echo "--------------------------------------------------------"
+echo "Supported Formats (known working): .image; .img; .dsk "
+echo "For DiskCopy 4.2 files, I recommend to use DiskCopy2DSK, by Steve Chamberlin, Big Mess o' Wires (emulatable on Linux systems with wine)"
+echo ""                                                                                       
+
+WINEDEBUG=-all wine "/usr/lib/mimage/Macintosh.exe" "$@"
