@@ -53,19 +53,11 @@ jobs:
           git archive --format=zip --output=mimage_${UPSTREAM_VERSION}_source.zip HEAD
           git archive --format=tar.gz --output=mimage_${UPSTREAM_VERSION}_source.tar.gz HEAD
 
-      - name: Upload Debian Packages (.deb, .changes, .buildinfo)
-        uses: actions/upload-artifact@v4
-        with:
-          name: mimage-${{ env.DEB_VERSION }}-deb
-          path: |
-            build_env/*.deb
-            build_env/*.changes
-            build_env/*.buildinfo
-
-      - name: Upload Source Archives
+      - name: Upload All Artifacts
         uses: actions/upload-artifact@v4
         with:
           name: mimage-${{ env.DEB_VERSION }}-source
           path: |
-            mimage_*_source.zip
-            mimage_*_source.tar.gz
+            *.deb
+            *.zip
+            *.tar.gz
