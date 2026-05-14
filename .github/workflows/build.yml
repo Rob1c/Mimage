@@ -16,7 +16,7 @@ jobs:
       - name: Install Debian Build Dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y debhelper dpkg-dev lintian fakeroot rsync
+          sudo apt-get install -y devscripts debhelper dpkg-dev lintian fakeroot rsync
 
       - name: Extract Versioning Info
         id: pkg_info
