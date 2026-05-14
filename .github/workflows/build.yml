@@ -21,7 +21,7 @@ jobs:
       - name: Extract Versioning Info
         id: pkg_info
         run: |
-          DEB_VERSION=$(grep -i '^Version:' debian/changelog | head -n 1 | sed -e 's/.*(\(.*\)).*/\1/')
+          DEB_VERSION=$(dpkg-parsechangelog -S Version)
           UPSTREAM_VERSION=$(echo $DEB_VERSION | cut -d'-' -f1)
 
           echo "DEB_VERSION=$DEB_VERSION" >> $GITHUB_ENV
