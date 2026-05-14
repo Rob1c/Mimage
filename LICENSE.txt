@@ -1,9 +1,6 @@
-
-CC-BY-NC License v4.0
-
-Mimage (c) v1.0
-
+Mimage (c) - Floppy Image to Stream Files CLI Converter / wrapper
 Copyright (c) 2026 Roberto Chichiarelli "Robic"
+
 Created by Roberto Chichiarelli
 GitHub: https://github.com/Rob1c
 Development period: April 2026 -
@@ -12,3 +9,29 @@ Any violation of these terms may result in termination of rights granted under t
 
 For commercial licensing inquiries, contact: roberto.chichiarelli@gmail.com
 
+1. MAIN PROJECT LICENSE (mimage script and documentation)
+The script "mimage" and all supporting documentation/packaging files created
+by Roberto Chichiarelli are licensed under:
+
+Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0) [cite: 8]
+
+- Attribution: You must give appropriate credit.
+- Non-Commercial: You may not use the material for commercial purposes.
+
+For commercial licensing inquiries, contact: roberto.chichiarelli@gmail.com
+
+2. THIRD-PARTY COMPONENT (Macintosh.exe)
+This repository includes a third-party binary file: "Macintosh.exe".
+
+- Copyright: ZrX (Kryoflux Forums)
+- Status: Freeware / Publicly shared binary.
+
+The author of the Mimage wrapper does not claim any ownership over
+Macintosh.exe. It is included "as-is" for technical compatibility.
+Users must respect the original intent of the author (ZrX) as shared
+on the Kryoflux community forums.
+
+3. DISCLAIMER
+This software is provided "as is", without warranty of any kind.
+In no event shall the authors be liable for any claim, damages or other
+liability arising from the use of this software.

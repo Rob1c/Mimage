@@ -3,22 +3,24 @@ Upstream-Name: mimage
 Source: https://forum.kryoflux.com/viewtopic.php?t=1090
 
 Files: *
-Copyright: ZrX
-License: custom-freeware
+Copyright: 2026 Roberto Chichiarelli <roberto.chichiarelli@gmail.com>
+License: CC-BY-NC-4.0
 
+Files: Macintosh.exe
+Copyright: ZrX (https://forum.kryoflux.com/memberlist.php?mode=viewprofile&u=1054)
 License: custom-freeware
- This software was released as freeware by ZrX on Kryoflux forums.
- It is distributed "as is" without express or implied warranty.
+ This binary was released by the user "ZrX" on the Kryoflux forums. [cite: 2]
+ No explicit license was provided, but the software was shared publicly
+ for community use. [cite: 2]
+ .
+ The author of this package (mimage) does not claim any rights over
+ Macintosh.exe and includes it "as-is" for compatibility purposes.
 
 Files: debian/*
 Copyright: 2026 Roberto Chichiarelli <roberto.chichiarelli@gmail.com>
-License: GPL-3+
+License: CC-BY-NC-4.0
 
-License: GPL-3+
- This program is free software; you can redistribute it and/or modify
- it under the terms of the GNU General Public License as published by
- the Free Software Foundation; either version 3 of the License, or
- (at your option) any later version.
- .
- On Debian systems, the full text of the GNU General Public License
- version 3 can be found in the file `/usr/share/common-licenses/GPL-3'.
+License: CC-BY-NC-4.0
+ In debian systems, the full text of the Creative Commons Attribution-NonCommercial 4.0
+ International License can be found at:
+ https://creativecommons.org/licenses/by-nc/4.0/legalcode
