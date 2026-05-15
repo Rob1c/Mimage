@@ -7,7 +7,7 @@
       <h1>Mimage -  Simplest CLI Floppy Image Converter</h1>
       <img src="https://github.com/Rob1c/Mimage/actions/workflows/build.yml/badge.svg" alt="Build Status">     
       <img src="https://img.shields.io/badge/version-1-blue" alt="Version">
-      [![CC BY-NC 4.0][cc-by-nc-shield]][https://creativecommons.org/licenses/by-nc/4.0/]
+      <img src="https://creativecommons.org/licenses/by-nc/4.0/" alt="CC-BY-NC 4.0">
       <img src="https://img.shields.io/badge/-Windows-0078D6?logo=windows&logoColor=white" alt="Windows">
       <img src="https://img.shields.io/badge/platform-Debian%20|%20Ubuntu-orange" alt="Platform">
     </td>
