@@ -9,7 +9,8 @@
       <img src="https://img.shields.io/badge/version-1-blue" alt="Version">
       <img src="https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg" alt="CC-BY-NC 4.0">
       <img src="https://img.shields.io/badge/-Windows-0078D6?logo=windows&logoColor=white" alt="Windows">
-      <img src="https://img.shields.io/badge/platform-Debian%20|%20Ubuntu-orange" alt="Platform">
+      <img src="https://img.shields.io/badge/-Debian%20|%20Ubuntu-orange" alt="Debian/Ubuntu">
+      <img src="https://img.shields.io/badge/-MacOS-grey" alt="MacOS">
     </td>
   </tr>
 </table>
