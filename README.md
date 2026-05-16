@@ -22,6 +22,11 @@ Mimage is a CLI floppy image to stream files (.raw) converter.
 It was created to greatly simplify the delicate process of converting floppy disk images into stream files for low-level writing. Mimage is useful for quick conversions and then writing floppies for all kinds of vintage machines (don't let the logo alone convince you!) using cards like Greasweazle or Kryoflux.
 
 It basically acts as a simple wrapper for the CLI tool "Macintosh.exe" by ZrX, also included in the main branch.
+
+## Need a simple and comprehensive how-to guide? I've created one specifically for you. It's for Macintosh, but it works equally well on other formats and machines.
+
+[Take a look!](https://www.reddit.com/r/VintageApple/comments/1t0pupi/how_to_create_a_35_floppy_for_classic_macs_with/)
+
 ## ⚖️ License Compliance
 
 This project adopts a mixed license structure to ensure maximum transparency:
@@ -48,6 +53,17 @@ Or via dpkg:
 ```bash
 sudo dpkg -i ./mimage-[version]_all.deb
 ```
+
+## Usage
+```bash
+mimage [diskimagename] [outputdirectory]/[streamfilename]
+```
+Example:
+```bash
+mimage myfloppy.img myfloppyraw/track
+```
+Mimage will generate several .raw files. It's strongly recommended to use an output directory.
+
 ## Compatibility
 This package was developed and tested under `Debian 13 "Trixie" (Stable)`, but it should work fine under every debian-based system.
 

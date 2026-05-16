@@ -6,4 +6,25 @@ echo "Supported Formats (known working): .image; .img; .dsk "
 echo "For DiskCopy 4.2 files, I recommend to use DiskCopy2DSK, by Steve Chamberlin, Big Mess o' Wires (emulatable on Linux systems with wine)"
 echo ""                                                                                       
 
+
+
+SOURCE="$1"
+OUT_PATH="$2"
+OUT_DIR=$(dirname "$OUT_PATH")
+
+if [ ! -d "$OUT_DIR" ]; then
+    echo "Output directory does not exist: $OUT_DIR"
+    read -r -p "Create it? [y/N] " answer
+    case "$answer" in
+        [yY][eE][sS]|[yY])
+            mkdir -p "$OUT_DIR"
+            echo "Created: $OUT_DIR"
+            ;;
+        *)
+            echo "Aborted."
+            exit 1
+            ;;
+    esac
+fi
+
 WINEDEBUG=-all wine "/usr/lib/mimage/Macintosh.exe" "$@"
