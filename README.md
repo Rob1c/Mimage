@@ -39,7 +39,6 @@ Refer to the LICENSE.txt and debian/copyright files for full details.
 
 ## 📦 Package Details
 
-- **Latest Version**: `1.0.1`
 - **Architecture**: `x86_64 (amd64)`
 - **Dependencies**: `wine` | `wine64` | `wine32`
 - **Install location**: `/usr/bin/`
