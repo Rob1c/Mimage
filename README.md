@@ -70,7 +70,8 @@ mimage myfloppy.img myfloppyraw/track
 Mimage will generate several .raw files. It's strongly recommended to use an output directory.
 
 ## Compatibility
-This package was developed and tested under `Debian 13 "Trixie" (Stable)`, but it should work fine under every debian-based system.
+This package was developed and tested under `Debian 13 "Trixie" (Stable)`.
+See "Installation" for cross-platform compatibility information.
 
 ## 🤝 Willingness to Collaborate
 If ZrX ever gets to know Mimage, it would be an honor first of all to thank him, and then hope for a strong collaboration!
