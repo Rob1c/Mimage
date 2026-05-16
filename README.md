@@ -45,6 +45,7 @@ Refer to the LICENSE.txt and debian/copyright files for full details.
 - **Install location**: `/usr/bin/`
 
 ## Installation
+## Debian | Ubuntu (.deb package) 
 Via apt (**recommended**, because it automatically resolves dependencies):
 ```bash
 sudo apt install ./mimage-[version]_all.deb
@@ -53,6 +54,10 @@ Or via dpkg:
 ```bash
 sudo dpkg -i ./mimage-[version]_all.deb
 ```
+## Windows and MacOS
+Because Mimage is written in Unix Bash, you can run the executable on MacOS, but not on Windows, unless you use an emulator.
+
+To get around this, there's a very simple solution. Just download the original `Macintosh.exe` and run it conveniently from the terminal.
 
 ## Usage
 ```bash
