@@ -1,3 +1,10 @@
+mimage (1.1.0-1) unstable; urgency=low
+
+  * Mimage now checks if output directory exists before running
+  * Asks user confirmation to create missing output directory
+
+ -- Roberto Chichiarelli <roberto.chichiarelli@gmail.com>  Sat, 16 May 2026 15:34:43 +0200
+
 mimage (1.0-1) unstable; urgency=low
 
   * Initial release. (Closes: #123456)

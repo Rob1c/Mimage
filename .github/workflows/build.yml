@@ -1,64 +1,69 @@
-name: Build Mimage Artifacts
+name: Build and Release Mimage
 
 on:
   push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+    tags:
+      - 'v*'
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Install Debian Build Dependencies
+      - name: Install build dependencies
         run: |
           sudo apt-get update
           sudo apt-get install -y build-essential devscripts debhelper dpkg-dev lintian fakeroot rsync
 
-      - name: Extract Versioning Info
-        id: pkg_info
+      - name: Extract version from changelog
         run: |
           DEB_VERSION=$(dpkg-parsechangelog -S Version)
           UPSTREAM_VERSION=$(echo $DEB_VERSION | cut -d'-' -f1)
-
           echo "DEB_VERSION=$DEB_VERSION" >> $GITHUB_ENV
           echo "UPSTREAM_VERSION=$UPSTREAM_VERSION" >> $GITHUB_ENV
 
-      - name: Prepare Strict Debian Build Environment
+      - name: Prepare build environment
         run: |
           mkdir -p build_env/mimage-${UPSTREAM_VERSION}
-
-          # copies everything (except .git folder)
           rsync -a --exclude='.git' --exclude='build_env' ./ build_env/mimage-${UPSTREAM_VERSION}/
-
           cd build_env
-          tar -cJvf mimage_${UPSTREAM_VERSION}.orig.tar.xz --exclude='debian' mimage-${UPSTREAM_VERSION}/
+          tar -cJf mimage_${UPSTREAM_VERSION}.orig.tar.xz --exclude='debian' mimage-${UPSTREAM_VERSION}/
 
-      - name: Build Debian Package (debuild)
+      - name: Build Debian package
         run: |
           cd build_env/mimage-${UPSTREAM_VERSION}
           debuild -us -uc
 
-      - name: Quality Assurance (Lintian)
+      - name: Lintian QA
         run: |
           cd build_env
           lintian -EviIL +pedantic *.changes || true
 
-      - name: Create Source Code Archives
+      - name: Create source archives
         run: |
-          # git archive for creating clean zip 'n tar.gz
           git archive --format=zip --output=mimage_${UPSTREAM_VERSION}_source.zip HEAD
           git archive --format=tar.gz --output=mimage_${UPSTREAM_VERSION}_source.tar.gz HEAD
 
-      - name: Upload All Artifacts
-        uses: actions/upload-artifact@v4
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
         with:
-          # Questo darà un nome chiaro al download, es: mimage-1.0-1-build
-          name: mimage-${{ env.DEB_VERSION }}-build
-          path: |
+          name: "mimage ${{ env.UPSTREAM_VERSION }}"
+          body: |
+            ## mimage ${{ env.UPSTREAM_VERSION }}
+
+            See `debian/changelog` for full release notes.
+
+            ### Install
+            Download the `.deb` and run:
+            ```
+            sudo dpkg -i mimage_${{ env.DEB_VERSION }}_all.deb
+            ```
+          files: |
             build_env/*.deb
             build_env/*.changes
             build_env/*.buildinfo

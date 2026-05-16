@@ -4,7 +4,7 @@ echo "Original software © ZrX (forum.kryoflux.com; https://forum.kryoflux.com/v
 echo "--------------------------------------------------------"
 echo "Supported Formats (known working): .image; .img; .dsk "
 echo "For DiskCopy 4.2 files, I recommend to use DiskCopy2DSK, by Steve Chamberlin, Big Mess o' Wires (emulatable on Linux systems with wine)"
-echo ""                                                                                       
+echo ""
 
 
 
